@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		
+		<meta name="description" content="GCE Tuning Club">
+		<meta name="author" content="Antonin Brugnot">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>GCE Tuning Club</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img src="img/gce.jpg"/>
+					<h3>GCE Tuning Club</h3>
+					<p>
+						<small>Antonin Brugnot</small>
+					</p>
+				</section>
+				<section>
+					<section>
+						<h2 class="r-fit-text">Merci !</h2>
+					</section>
+					<section>
+						<img src="img/partners.jpg"/>
+					</section>
+					<section data-auto-animate>
+						<h2 data-id="code-title">bio.yaml</h2>
+						<pre data-id="code-animation"><code class="hljs yaml" data-trim data-line-numbers><script type="text/template">
+							first_name: "Antonin"
+							family_name: "Brugnot"
+							company: "Onepoint"
+							twitter: null
+							personal_info:
+							  email: "a.brugnot@groupeonepoint.com"
+							  birth: "21st July, 1987"
+							  photo: "tronche_joviale.png"
+							  location: "Nantes"
+							summary: "Lead Tech, impl DEVOPS, FullStack Java, Cloud"
+						</script></code></pre>
+						<aside class="notes">
+							Onepoint, David Layani.
+							On embauche sortie d'école et on prends en stage
+						</aside>	
+					</section>
+					<section>
+						<img  style="max-width: 40%;" src="img/qr-code.svg"/>
+						<img  style="max-width: 40%;" src="img/qrcode_open_feedback.png"/>
+					</section>										
+				</section>	            
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/appearance/appearance.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [RevealNotes, RevealMarkdown, RevealHighlight, Appearance ]
+			});
+		</script>
+		<style type="text/css">
+			/* 1. Style header/footer <div> so they are positioned as desired. */
+			#header-left {
+				position: absolute;
+				top: 0%;
+				left: 0%;
+			}
+			#header-right {
+				position: absolute;
+				top: 0%;
+				right: 0%;
+			}
+			#footer-left {
+				position: absolute;
+				bottom: 0%;
+				left: 0%;
+			}
+		</style>
+		
+		<!-- 2. Create hidden header/footer <div> -->
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<div id="header-left"><small>08.01.2025</small></div>
+				<div id="header-right"></div>
+				<div id="footer-left"><img style="max-width: 10%;" src="img/onepoint-logo.png"></div>
+			</div>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+			var header = $('#header').html();
+			if ( window.location.search.match( /print-pdf/gi ) ) {
+				Reveal.addEventListener( 'ready', function( event ) {
+					$('.slide-background').append(header);
+				});
+			}
+			else {
+				$('div.reveal').append(header);
+		   }
+		</script>		
+	</body>
+</html>
