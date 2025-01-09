@@ -6,14 +6,18 @@ variable "region" {
   default = "us-central1"
 }
 
+variable "zone" {
+  default = "us-central1-a"
+}
+
 source "googlecompute" "tomcat-builder" {
-  project_id      = var.project_id
-  source_image    = "debian-11-bullseye-v20230911" # Image de base
-  source_image_family = "debian-11"
+  project_id           = var.project_id
+  source_image         = "debian-11-bullseye-v20230911" # Image de base
+  source_image_family  = "debian-11"
   source_image_project = "debian-cloud"
-  machine_type    = "e2-micro"
-  region          = var.region
-  zone            = "us-central1-a"
+  machine_type         = "e2-micro"
+  region               = var.region
+  zone                 = var.zone
 }
 
 build {
