@@ -7,7 +7,9 @@ Le GTC mon gars !
 * docs (source)
 * [live](https://antoninbr.github.io/talk-gce-tuning-club/)
 
-## Demo
+## Demos
+
+En prérequis il vous faudra un projet GCP et avoir installé le [SDK GCP](https://cloud.google.com/sdk/docs/install?hl=fr).
 
 * [startup-script](demo/startup-script/README.md)
 * [ansible](demo/ansible/README.md)
