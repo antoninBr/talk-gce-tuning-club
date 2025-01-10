@@ -1,5 +1,7 @@
 # talk-gce-tuning-club
 
+![logo](./docs/img/gce.jpg)
+
 Le GTC mon gars !
 
 ## Slides
