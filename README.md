@@ -1,5 +1,7 @@
 # talk-gce-tuning-club
 
+> Olivier ! Olivier ! Olivier tu vas me niquer la batterie. mets la cassette de décibel. tu fais claquer un coup et c'est tout toi. tu vas me niquer les batteries.
+
 ![logo](./docs/img/gce.jpg)
 
 Le GTC mon gars !
