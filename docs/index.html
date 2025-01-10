@@ -33,6 +33,73 @@
 				</section>
 				<section>
 					<section>
+						<h2>startup scripts</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Solution native de customization des VM Linux GCE</li>
+							<li class="fragment">Script qui va s'éxecuter au démarrage de la VM (bash, python)</li>
+							<li class="fragment">Clé de Metadonnée : startup-script</li>
+							<li class="fragment">Clé de Metadonnée : startup-script-url</li>
+							<li class="fragment">Au niveau projet -> Au niveau VM</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment highlight-red">Attention</li>
+							<li class="fragment">S'éxecute en root</li>
+							<li class="fragment">Peut utiliser d'autres metadonnées (pratique)</li>
+							<li class="fragment">Avec les autorisation du SA associé à la VM</li>
+							<li class="fragment">Autres ressources : CS, CLoudSQL, FIlestore</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<h2 data-id="code-title">Execution</h2>
+						<pre data-id="code-animation"><code class="hljs shell" data-trim><script type="text/template">
+							sudo google_metadata_script_runner startup
+						</script></code></pre>
+						<h2 data-id="code-title">Résultat</h2>
+						<pre data-id="code-animation"><code class="hljs shell" data-trim><script type="text/template">
+							sudo journalctl -u google-startup-scripts.service
+						</script></code></pre>
+					</section>
+					<section>
+						<p>Existe aussi pour les VM Windows (bat, cmd, powershell)</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Ansible</h2>
+					</section>	
+					<section>
+						<ul>
+							<li>Solution de configuration</li>
+							<li class="fragment">Redhat</li>
+							<li class="fragment">Python</li>
+							<li class="fragment">Eprouvée avec forte communauté</li>
+							<li class="fragment">IAAS</li>
+						</ul>
+					</section>				
+				</section>
+				<section>
+					<section>
+						<h2>Packer</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Solution de création d'image OS</li>
+							<li class="fragment">Hashicorp (comme Terraform ou Vault)</li>
+							<li class="fragment">Json ou HCL</li>
+							<li class="fragment">S'intégre bien avec GCE</li>
+							<li class="fragment">IAAS</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Demo time</h2>
+				</section>
+				<section>
+					<section>
 						<h2 class="r-fit-text">Merci !</h2>
 					</section>
 					<section data-auto-animate>
