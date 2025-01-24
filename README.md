@@ -17,4 +17,7 @@ En prérequis il vous faudra un projet GCP et avoir installé le [SDK GCP](https
 * [ansible](demo/ansible/README.md)
 * [packer](demo/packer/README.md)
 
+> [!TIP]
+> Pas d'inquiétude, les VM de ces démos sont spot (ça ne vous coûtera presque rien).
+
 @Antonin Brugnot

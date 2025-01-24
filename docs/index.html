@@ -34,11 +34,30 @@
 				<section>
 					<section>
 						<h2>Pourquoi ce talk ?</h2>
-					</section>					
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">Le tuning automobile me fascine</li>
+							<li class="fragment">Prendre une voiture de série</li>
+							<li class="fragment">Et l'améliorer, la personnaliser</li>
+							<li class="fragment">Avec plus ou moins de succès</li>
+							<li class="fragment">Les goûts et les couleurs</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li class="fragment">VM GCE</li>
+							<li class="fragment">Catalogue d'images OS</li>
+							<li class="fragment">Personnaliser</li>
+							<li class="fragment">Améliorer ou les prendre comme base</li>
+							<li class="fragment">Voir plus</li>
+						</ul>
+					</section>
 				</section>
 				<section>
 					<section>
 						<h2>startup scripts</h2>
+						<img style="max-width: 50%;" src="img/starter.png"/>
 					</section>
 					<section>
 						<ul>
@@ -84,17 +103,54 @@
 						</ul>
 					</section>
 					<section>
+						<h3>D'autres cas</h3>
 						<ul>
-							<li>D'autres cas</li>
 							<li class="fragment">Avec des limitations</li>
 							<li class="fragment">Idempotence à gérer</li>
 						</ul>
+					</section>
+					<section>
+						<img style="max-width: 90%;" src="img/cake.png"/>
+					</section>
+                    <section>
+						<img style="max-width: 50%;" src="img/turbo.png"/>
+					</section>
+					<section data-auto-animate>
+						<h2 data-id="code-title">OTS</h2>
+						<h4 class="fragment">One Time Script</h4>
+						<pre data-id="code-animation"><code class="hljs shell" data-trim><script type="text/template">
+							LOCK_FILE="/var/log/startup_script_already_played"
+							if [ -f "$LOCK_FILE" ]; then
+    							echo "Le script a déjà été lancé une fois sur la VM, fin."
+							else
+    							echo "***************************************"
+    							echo "Début de l'installation des paquets ..."
+						</script></code></pre>
+					</section>
+					<section>
+						<h3>startup-script shell de 1250 lignes</h3>
+						<ul>
+							<li class="fragment">Add x libraries</li>
+							<li class="fragment">Performing x disk mounts</li>
+							<li class="fragment">Add x users avec chroot répertoires (config sshd)</li>
+							<li class="fragment">Add Java, tomcat</li>
+							<li class="fragment">Add Orchestration agent binaries</li>
+							<li class="fragment">Add x systemctl services</li>
+							<li class="fragment">Add x jobs cron</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Demo time</h2>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2>Ansible</h2>
-					</section>	
+						<img style="max-width: 50%;" src="img/crane.png"/>
+					</section>
+					<section>
+						<p class="fragment">❤️ Ansible ❤️</p>
+					</section>
 					<section>
 						<ul>
 							<li>Solution de configuration</li>
@@ -114,6 +170,15 @@
 						</ul>						
 					</section>
 					<section>
+						<h3>ansible-host</h3>
+						<ul>
+							<li class="fragment">Votre poste de dev</li>
+							<li class="fragment">CICD : Github actions</li>
+							<li class="fragment">Une autre VM GCE</li>
+							<li class="fragment">Une Cloud Function</li>
+						</ul>
+					</section>
+					<section>
 						<h2>Cas d'usage</h2>
 					</section>
 					<section>
@@ -121,13 +186,27 @@
 							<li>Installer des applications sur x VM</li>
 							<li>Installer serveurs nginx, apache, tomcat</li>
 							<li>Archiver, nettoyer, balayer, ...</li>
-							<li class="fragment">Sky is the limit !</li>
+							<li class="fragment">Sky is the limit ! 🚀</li>
 						</ul>
-					</section>		
+					</section>
+					<section>
+						<ul>
+							<li>En couple avec les startup scripts</li>
+							<li>Script : Montage, liens avec autres services GCP</li>
+							<li>Playbook : Creation des users, dossiers, installation des packages</li>
+						</ul>
+					</section>
+					<section>
+						<img style="max-width: 80%;" src="img/choux_carottes.png"/>
+					</section>
+					<section>
+						<h2>Demo time</h2>
+					</section>	
 				</section>
 				<section>
 					<section>
 						<h2>Packer</h2>
+						<img style="max-width: 50%;" src="img/factory.png"/>
 					</section>
 					<section>
 						<ul>
@@ -138,9 +217,12 @@
 							<li class="fragment">IAAS</li>
 						</ul>
 					</section>
-				</section>
-				<section>
-					<h2>Demo time</h2>
+					<section>
+						<h2>Cas d'usage</h2>
+					</section>
+					<section>
+						<h2>Demo time</h2>
+					</section>
 				</section>
 				<section>
 					<section>
